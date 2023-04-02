@@ -1,7 +1,10 @@
 import {Button ,Card ,Row,Col} from "react-bootstrap";
-
+// import CartContext from "../Store/CartContext";
+// import { useContext } from "react";
 
 function MyCard(props) {
+// const cartCtx=useContext(CartContext);
+// cartCtx.addToItem({})
   return (
     <Card style={{ width: "16rem" ,margin:'auto',marginTop:'1rem' ,justifyContent:'space-between'}} >
       <Card.Header>

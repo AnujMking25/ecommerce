@@ -1,13 +1,15 @@
 import './App.css';
 import Store from './component/Store/Store';
-
+import CardProvider from './Store/CardProvider'
 
 function App() {
   return (
-    <div className="App">
-     <Store/>
-    </div>
-  );
+    <CardProvider>
+      <Store/>
+    </CardProvider>
+     
+     
+  )
 }
 
 export default App;

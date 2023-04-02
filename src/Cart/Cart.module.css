@@ -1,0 +1,18 @@
+.maindiv{
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    margin-left: auto;
+    background-color:white;
+    border: 1px red;
+    z-index: 30;
+    right: 0;
+    margin: 4rem 0 0 0;
+}
+.maindiv h1{
+    margin-top: 2rem;
+    color: black;
+    text-align: center;
+    font-family: -moz-initial;
+    
+}
