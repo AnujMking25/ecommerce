@@ -14,7 +14,7 @@ const ModalShow = (props) => {
       title={item.title}
       imageurl={item.imageurl}
       price={item.price}
-      quentity={item.quantity}
+      amount={item.amount}
     />
   )}</ul>
   // console.log(showlist);

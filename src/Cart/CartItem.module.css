@@ -3,3 +3,9 @@
     list-style: none;
 
 }
+.mainli input{
+    width: 30px;
+    margin-right: 5px;
+    border: 1px solid rgb(0, 204, 255);
+    outline: none;
+}

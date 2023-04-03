@@ -10,8 +10,7 @@ const addnewItem=()=>{
     imageurl:props.imgurl,
     title:props.title,
     price:props.price,
-
-
+    amount:1
   })
 }
 

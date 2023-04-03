@@ -7,9 +7,24 @@ const defaultData = {
 };
 const addToCart = (state, action) => {
   if (action.type === "ADD") {
-    const updatedItems = state.items.concat(action.item);
+    //  console.log(action.item.id);
     const updatedItemsTotalAmount = state.totalAmount +action.item.price ;
-      
+      const existingCartItemIndex=state.items.findIndex(item=>item.id===action.item.id);
+      const existingItem=state.items[existingCartItemIndex];
+      let updatedItems;
+      if(existingItem){
+        const updateItem={
+          ...existingItem,
+          amount:existingItem.amount+1,
+          price:existingItem.price+action.item.price,
+
+        }
+        updatedItems=[...state.items];
+        updatedItems[existingCartItemIndex]=updateItem;
+      }
+      else{
+        updatedItems = state.items.concat(action.item);
+      }
     return {
       items: updatedItems,
       totalAmount: updatedItemsTotalAmount,
@@ -17,12 +32,10 @@ const addToCart = (state, action) => {
 
   }
   if(action.type==="REMOVE"){
-    // console.log('i am runing');
+
     const existingCartItemIndex=state.items.findIndex((item)=>item.id===action.id);
-    const existingItem=state.items[existingCartItemIndex];
-    // console.log('i am runing now');
+    const existingItem=state.items[existingCartItemIndex]; 
     const updatedTotalAmount=state.totalAmount-existingItem.price;
-    // console.log(updatedTotalAmount);
     let updatedItems;
    
     updatedItems= state.items.filter(item => item.id !== action.id)
