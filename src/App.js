@@ -1,6 +1,6 @@
 import './App.css';
 import Store from './component/Store/Store';
-import CardProvider from './Store/CardProvider'
+import CardProvider from './StoreContext/CardProvider'
 
 function App() {
   return (

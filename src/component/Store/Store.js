@@ -17,8 +17,10 @@ const Store = () => {
     <Col style={{paddingLeft:'14rem'}}><CardData/></Col>
     <Col style={{paddingRight:'14rem'}}> <CardData/></Col>
   </Row>
-  
- <Button className='mt-5'>See the cart</Button>
+  <div style={{paddingLeft:'50%'}}>
+  <Button className='mt-5'>See the cart</Button>
+  </div>
+ 
  <MyFooter/>
   </>
   )
