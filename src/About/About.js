@@ -1,14 +1,18 @@
 import React from 'react'
-import { Container, Navbar} from "react-bootstrap";
+import BannerGenerics from '../component/Store/BannerGenerics';
+import { Container } from 'react-bootstrap';
+import AboutBody from './AboutBody';
+import MyFooter from '../component/Footer/MyFooter';
 const About = () => {
   return (
-    <Navbar bg="dark" variant="dark" > 
-    <Container>
-        <Navbar.Brand  href="#">HOME</Navbar.Brand>
-      <Navbar.Brand href="#">ABOUT</Navbar.Brand>
-      <Navbar.Brand href="#">STORE</Navbar.Brand>
-    </Container>
-</Navbar>
+   <>
+   <BannerGenerics/>
+   <Container className='mt-5'>
+ <h2 style={{fontFamily:'Metal Mania' ,textAlign:'center',fontSize:'30px',fontWeight:'bold'}}>About</h2>
+</Container>
+<AboutBody/>
+<MyFooter/>
+   </>
   )
 }
 export default About;

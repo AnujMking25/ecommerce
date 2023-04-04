@@ -1,0 +1,17 @@
+.navbardiv{
+    display: flex;
+    margin: auto;
+    padding: 0;
+}
+.navbarNavLink{
+    text-decoration: none;
+    text-align: center;
+    margin-left: 5rem;
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+}
+.navbarNavLink:hover{
+    cursor: pointer;
+    color: white;
+}
