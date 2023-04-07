@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Image } from "react-bootstrap";
-import BandMember from "../Asset/Band Members.png";
+import BandMember from "../../Asset/Band Members.png";
 const AboutBody = () => {
   return (
     <Container>

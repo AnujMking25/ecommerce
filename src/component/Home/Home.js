@@ -1,5 +1,5 @@
 import React from "react";
-import BannerGenerics from "../component/Store/BannerGenerics";
+import BannerGenerics from "../Store/BannerGenerics";
 import { Button } from "react-bootstrap";
 import HomeBody from "./HomeBody";
 

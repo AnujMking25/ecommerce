@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import classes from "./Cart.module.css";
 import { Button, Row, Col } from "react-bootstrap";
-import CartContext from "../StoreContext/CartContext";
+import CartContext from "../../StoreContext/CartContext";
 import CartItem from "./CartItem";
 
 const ModalShow = (props) => {

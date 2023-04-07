@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-import MyFooter from '../component/Footer/MyFooter'
+import MyFooter from '../Footer/MyFooter'
 const HomeBody = () => {
   return (
     <>

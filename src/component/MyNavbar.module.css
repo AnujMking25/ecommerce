@@ -3,7 +3,7 @@
     margin: auto;
     padding: 0;
 }
-.navbarNavLink{
+.navbardiv a{
     text-decoration: none;
     text-align: center;
     margin-left: 5rem;
@@ -11,7 +11,14 @@
     font-size: 18px;
     font-weight: 200;
 }
-.navbarNavLink:hover{
-    cursor: pointer;
-    color: white;
+
+.navbardiv a:hover,
+.navbardiv a:active,
+.navbardiv a.active{
+ 
+    color: #95bcf0;
+    border-bottom: 1px solid #95bcf0;
+
 }
+
+

@@ -33,7 +33,7 @@ const CardData = () => {
   return (
     <>
     {productsArr.map((item)=>{
-        return <MyCard  id={ item.id} title={item.title} imgurl={item.imageUrl} price={item.price}/>
+        return <MyCard  key={item.id} id={ item.id} title={item.title} imgurl={item.imageUrl} price={item.price}/>
     })}
     </>
   );

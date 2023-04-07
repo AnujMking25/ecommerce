@@ -1,6 +1,6 @@
 import { Image, Row, Col, Button } from "react-bootstrap";
 import classes from "./CartItem.module.css";
-import CartContext from "../StoreContext/CartContext";
+import CartContext from "../../StoreContext/CartContext";
 import { useContext, useState } from "react";
 const CartItem = (props) => {
  useState()

@@ -1,6 +1,6 @@
 import React from "react";
 import BannerGenerics from "./BannerGenerics";
-import CardData from "../../Card/CardData";
+import CardData from "../Card/CardData";
 import { Container, Button, Row} from "react-bootstrap";
 import MyFooter from "../Footer/MyFooter";
 
@@ -12,12 +12,12 @@ const Store = () => {
         <h1 style={{ fontFamily: "cursive", textAlign: "center" }}>MUSIC</h1>
       </Container>
       <Container>
-        <Row style={{ width: "600px", margin: "auto" }}>
+        <Row style={{ width: "60%", margin: "auto" }}>
           <CardData />
         </Row>
 
         <div style={{ paddingLeft: "47%" }}>
-          <Button className="mt-5">See the cart</Button>
+          <Button className="mt-5" style={{backgroundColor:"#56CCF2",border:'none'}}>See the cart</Button>
         </div>
       </Container>
 

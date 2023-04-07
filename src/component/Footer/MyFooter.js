@@ -7,7 +7,7 @@ const MyFooter = () => {
     <div
       style={{
         height: "6rem",
-        backgroundColor: "darkcyan",
+        backgroundColor: "#56CCF2",
         marginTop: "2.5rem",
         paddingTop: "2rem",
       }}
