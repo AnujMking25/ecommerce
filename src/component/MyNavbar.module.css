@@ -13,8 +13,8 @@
 }
 
 .navbardiv a:hover,
-.navbardiv a:active,
-.navbardiv a.active{
+/* .navbardiv a:active, */
+.navbardiv :active{
  
     color: #95bcf0;
     border-bottom: 1px solid #95bcf0;

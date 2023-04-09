@@ -13,9 +13,8 @@ function MyCard(props) {
       price: props.price,
       amount: 1,
     });
-
   };
-const ProductUrL='/store/ProductDetails/'+props.id;
+  const ProductUrL = "/store/ProductDetails";
   return (
     <Card
       key={props.id}
@@ -29,15 +28,17 @@ const ProductUrL='/store/ProductDetails/'+props.id;
       </Card.Header>
 
       <Card.Body style={{ padding: "0px", overflow: "hidden" }}>
-       
-       <Link to= {ProductUrL}>
+        <Link
+          to={ProductUrL}
+          state={{ img:{imgurl: props.imgurl ,imgname : props.title} }}
+        >
           <Card.Img
-          src={props.imgurl}
-          style={{
-            height: "100%",
-            width: "100%",
-          }} 
-        />
+            src={props.imgurl}
+            style={{
+              height: "100%",
+              width: "100%",
+            }}
+          />
         </Link>
       </Card.Body>
 
