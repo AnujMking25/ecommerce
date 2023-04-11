@@ -1,0 +1,15 @@
+.maindiv{
+    width: 35%;
+    margin-top: 5%;
+    margin-left: 35%;
+    border: 3px solid blueviolet;
+    border-radius: 12px;
+    padding: 2rem;
+    
+}
+.maindiv Button{
+    margin-bottom: 1rem;
+}
+.maindiv p{
+    text-align: center;
+}

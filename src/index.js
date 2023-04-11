@@ -7,12 +7,17 @@ import '../node_modules/react-bootstrap/dist/react-bootstrap'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 // importing react-router-dom here
 import { BrowserRouter } from 'react-router-dom';
+
+import CardProvider from './StoreContext/CardProvider'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <CardProvider>
     <BrowserRouter>
     <App />
     </BrowserRouter>
+    </CardProvider>
   </React.StrictMode>
 );
 
