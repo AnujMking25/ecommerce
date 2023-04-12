@@ -18,17 +18,18 @@ const LoginLogout = () => {
     }
 
 
-    useEffect(() => {
-     const settimeout= setTimeout(()=> {
-        localStorage.removeItem('token')
-       }, 10000);
-       console.log('hii its LoginLogout page setTimeout');
+    // useEffect(() => {
+    // //  const settimeout= 
+    //  setTimeout(()=> {
+    //     localStorage.removeItem('token')
+    //    }, 10000);
+    //    console.log('hii its LoginLogout page setTimeout');
     
-    // return() =>{
-    //   clearTimeout(settimeout);
-    // }
+    // // return() =>{
+    // //   clearTimeout(settimeout);
+    // // }
     
-    },[])
+    // },[])
     const onSubmitHandler=(e)=>{
         e.preventDefault();
         const enteredEmail=emailInputRef.current.value;
@@ -64,8 +65,8 @@ const LoginLogout = () => {
             })
           }
         }).then((data)=>{
-          // console.log(data.idToken);
-           cartCtx.TokenIn(data.idToken)
+          const currentTime=new Date().getMinutes();
+           cartCtx.TokenIn(data.idToken,currentTime)
             Navigate('/store');
         }).catch(err=>{
           alert(err.message)
