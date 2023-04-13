@@ -12,7 +12,7 @@ import CartContext from './StoreContext/CartContext';
 
 function App() {
 const cartCtx=useContext(CartContext);
-console.log("it is app.js", cartCtx.isLoggedIn);
+
   return (
     <>
      {/* <CardProvider> */}

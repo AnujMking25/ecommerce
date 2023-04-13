@@ -1,9 +1,10 @@
 import classes from './MyNavbar.module.css'
 import { Button, Container, Navbar} from "react-bootstrap";
 import React, { useContext, useState } from 'react'
-import Cart from "./Cart/Cart";
+// import Cart from "./Cart/Cart";
 import {NavLink  } from "react-router-dom";
 import CartContext from '../StoreContext/CartContext';
+import CartCurdCurd from './Cart/CartCurdCurd';
 
  const MyNavbar = () => {
 
@@ -28,7 +29,8 @@ const onHideHandler=()=>{
             </nav>
           <Button  variant="outline-danger"  onClick={onShowHandler}>CART</Button>
         </Container> 
-        {show && <Cart onHide={onHideHandler}/>} 
+        {/* {show && <Cart onHide={onHideHandler}/>}  */} {/*Save To React */}
+        {show && <CartCurdCurd onHide={onHideHandler} />} {/* save To curdcurd*/}
     </Navbar>
   )
 }

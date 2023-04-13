@@ -55,7 +55,7 @@ const ContexProvider = (props) => {
   const [token, setToken] = useState(localStoragetoken);
 
   const userIsLoggedIn = !!token;
-  console.log("it is cardProvider", userIsLoggedIn);
+
   const addToItem = (item) => {
     dispatchCartItem({ type: "ADD", item: item });
   };
@@ -72,7 +72,7 @@ const ContexProvider = (props) => {
     const currentTime = +new Date().getMinutes();
     const RemainingMinute = expireTime - currentTime;
     if (RemainingMinute >= 0) {
-      console.log("I am runing");
+      
       setTimeout(()=>{
         removeToken();
         console.log("SEtTimeout running");
@@ -88,7 +88,7 @@ const ContexProvider = (props) => {
     setToken(idToken);
 
     localStorage.setItem("token", idToken);
-    localStorage.setItem("LogoutTime", +currentTime + 1);
+    localStorage.setItem("LogoutTime", +currentTime + 3);
 
     expireTimeInLocalStorage();
   };
