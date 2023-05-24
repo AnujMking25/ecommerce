@@ -1,0 +1,31 @@
+.maindiv{
+    height:auto;
+    background-color:#56CCF2;
+    margin-top:2.5rem;
+}
+.maindiv h1{
+    font-family:-moz-initial;
+    font-size:50px;
+    font-weight:bold;
+    color:white;
+    padding-left:4rem;
+    text-align: left;
+    width: 30rem;
+}
+.maindiv img{
+    height:30px;
+    margin-right:2rem; 
+}
+.maindiv div{
+    padding: 5px;
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+}
+.maindiv a{
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+
+}

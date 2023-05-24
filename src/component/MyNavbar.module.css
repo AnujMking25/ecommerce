@@ -1,24 +1,32 @@
-.navbardiv{
+.maindiv div{
     display: flex;
-    margin: auto;
-    padding: 0;
+margin: auto;
 }
-.navbardiv a{
+.maindiv a{
     text-decoration: none;
-    text-align: center;
-    margin-left: 5rem;
     color: white;
     font-size: 18px;
     font-weight: 200;
+    margin-left: 5rem;
 }
-
-.navbardiv a:hover,
-/* .navbardiv a:active, */
-.navbardiv :active{
- 
-    color: #95bcf0;
-    border-bottom: 1px solid #95bcf0;
-
+.maindiv button{
+    height:28px ;
+    width: 50px;
+    font-size: 14px;
+    color: white;
+    background-color: transparent;
+    padding: 3px;
+    border: 2px solid rgb(22, 61, 235);
+    border-radius: 7px;
+    float: right;
 }
-
-
+@media (min-width:546px) and (max-width:810px){
+    .maindiv a{
+        margin-left: 2rem;
+    }
+}
+@media (max-width:546px){
+    .maindiv a{
+    margin-left:5px ;
+    }
+}

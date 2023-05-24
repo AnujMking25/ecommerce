@@ -1,14 +1,13 @@
 import classes from './MyNavbar.module.css'
-import { Button, Container, Navbar} from "react-bootstrap";
+import {Container, Navbar,Nav} from "react-bootstrap";
 import React, { useContext, useState } from 'react'
-// import Cart from "./Cart/Cart";
+import Cart from "./Cart/Cart";
 import {NavLink  } from "react-router-dom";
-import CartContext from '../StoreContext/CartContext';
-import CartCurdCurd from './Cart/CartCurdCurd';
+import LoginContext from './LoginLogout/LoginContext'
 
  const MyNavbar = () => {
 
-  const cartCtx=useContext(CartContext);
+  const logCtx=useContext(LoginContext);
   const[show,setshow]=useState(false);
   const onShowHandler=()=>{
 setshow(true);
@@ -18,19 +17,19 @@ const onHideHandler=()=>{
 }
 
   return (
-    <Navbar bg="dark" variant="dark" style={{padding:'0.5px',marginBottom:'0.5px'}} > 
-        <Container fluid>
-            <nav className={classes.navbardiv}>
-                <NavLink active={classes.active} to='/' >HOME</NavLink>
-               {cartCtx.isLoggedIn && <NavLink  to='/store' >STORE</NavLink>}
-                <NavLink  to='/about'>ABOUT</NavLink>
-                <NavLink  to='/contactus'>Contact Us</NavLink>
+    <Navbar bg="dark" variant="dark" className='p-1 ' > 
+        <Container fluid className={classes.maindiv}>
+            <Nav>
+                <NavLink  to='/' >HOME</NavLink>
+               {logCtx.isLoggedIn && <NavLink  to='/store' >STORE</NavLink>}
+                <NavLink to='/about'>ABOUT</NavLink>
+                <NavLink to='/contactus'>Contact Us</NavLink>
                 <NavLink to='/login'>Login</NavLink>
-            </nav>
-          <Button  variant="outline-danger"  onClick={onShowHandler}>CART</Button>
+            </Nav>
+            {logCtx.isLoggedIn && <button onClick={onShowHandler}>CART</button>}
+          
         </Container> 
-        {/* {show && <Cart onHide={onHideHandler}/>}  */} {/*Save To React */}
-        {show && <CartCurdCurd onHide={onHideHandler} />} {/* save To curdcurd*/}
+        {show && <Cart onHide={onHideHandler}/>} 
     </Navbar>
   )
 }

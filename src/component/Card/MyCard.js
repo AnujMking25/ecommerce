@@ -5,14 +5,15 @@ import classes from "./MyCard.module.css";
 import { Link } from "react-router-dom";
 function MyCard(props) {
   const cartCtx = useContext(CartContext);
+  const item={
+    id: props.id,
+    imageurl: props.imgurl,
+    title: props.title,
+    price: props.price,
+    amount: 1,
+  }
   const addnewItem = () => {
-    cartCtx.addItem({
-      id: props.id,
-      imageurl: props.imgurl,
-      title: props.title,
-      price: props.price,
-      amount: 1,
-    });
+    cartCtx.addItem(item);
   };
   const ProductUrL = "/store/ProductDetails";
   return (

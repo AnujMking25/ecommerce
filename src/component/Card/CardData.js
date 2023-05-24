@@ -1,6 +1,5 @@
 import React from "react";
-// import MyCard from "./MyCard";
-import MyCardCurdCurdPost from "./MyCardCurdCurdPost";
+import MyCard from "./MyCard";
 
 const CardData = () => {
   const productsArr = [
@@ -39,24 +38,14 @@ const CardData = () => {
       {productsArr.map((item) => {
         return (
           // Data Store in Browser start
-        /* <MyCard
+         <MyCard
             key={item.id}
             id={item.id}
             title={item.title}
             imgurl={item.imageUrl}
             price={item.price}
-          /> */
+          /> 
           // Data Store in Browser End
-
-          // Data Store in Curd Curd start
-          <MyCardCurdCurdPost
-          key={item.id}
-          id={item.id}
-          title={item.title}
-          imgurl={item.imageUrl}
-          price={item.price}
-          />
-          // Date Store in Curd Curd end
         );
       })}
     </>

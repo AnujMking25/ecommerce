@@ -1,14 +1,13 @@
-import { Image, Row, Col} from "react-bootstrap";
+import { Image, Row, Col,Button} from "react-bootstrap";
 import classes from "./CartItem.module.css";
-// import CartContext from "../../StoreContext/CartContext";
-// import { useContext } from "react";
+import CartContext from "../../StoreContext/CartContext";
+import { useContext } from "react";
 const CartItem = (props) => {
 
-  // const cartCtx=useContext(CartContext);
-  // const removeItemhandler=()=>{
-  //   cartCtx.removeItem(props.id)
-  // }
- 
+  const cartCtx=useContext(CartContext);
+  const removeItemhandler=()=>{
+    cartCtx.removeItem(props.id)
+  }
   return (
     <li className={classes.mainli} key={props.id}>
       <Row style={{marginTop:'1rem'}}>
@@ -16,13 +15,13 @@ const CartItem = (props) => {
           <Col sm={6} style={{padding:'0'}}>
             <Image src={props.imageurl} style={{ height: "100%", width: "100%" }} />
           </Col>
-          <Col sm={6} style={{textAlign:'center'}}>{props.title}</Col>
+          <Col sm={6} style={{textAlign:'center',margin:'auto'}}>{props.title}</Col>
           </Row>
         </Col>
-        <Col sm={2} style={{textAlign:'center',paddingTop:'1rem'}}>{props.price}</Col>
+        <Col sm={2} style={{textAlign:'center',margin:'auto'}}>{props.price}</Col>
         <Col sm={5}>
-          <input defaultValue={props.amount} />
-          {/* <Button onClick={removeItemhandler}>Remove</Button> */}
+        <button style={{marginLeft:'1rem'}}>{props.amount}</button>
+          <Button onClick={removeItemhandler} style={{marginLeft:'4px'}}>Remove</Button>
         </Col>
       </Row>
     </li>

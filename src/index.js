@@ -1,25 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import App from './App';
 // importing bootstrap here
 import '../node_modules/react-bootstrap/dist/react-bootstrap'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 // importing react-router-dom here
 import { BrowserRouter } from 'react-router-dom';
+import LoginProvider from './component/LoginLogout/LoginProvider';
 
-import CardProvider from './StoreContext/CardProvider'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <CardProvider>
-    <BrowserRouter>
-    <App />
+  <BrowserRouter>
+     <LoginProvider>
+         <App />
+     </LoginProvider>
     </BrowserRouter>
-    </CardProvider>
-  </React.StrictMode>
-);
+   );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

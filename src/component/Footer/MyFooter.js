@@ -1,51 +1,24 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import imgpath from "../../Asset/YouTube.jpg";
-
+import classes from './MyFooter.module.css';
 const MyFooter = () => {
   return (
-    <div
-      style={{
-        height: "6rem",
-        backgroundColor: "#56CCF2",
-        marginTop: "2.5rem",
-        paddingTop: "2rem",
-      }}
-    >
-      <Container>
-        <Row style={{ marginTop: "-1rem" }}>
-          <Col>
-            {" "}
-            <h1
-              style={{
-                fontFamily: "-moz-initial",
-                fontSize: "50px",
-                fontWeight: "bold",
-                color: "white",
-                paddingLeft: "4rem",
-                textAlign: "left",
-                width: "30rem",
-              }}
-            >
-              The Generics
-            </h1>
+    <div className={classes.maindiv}>
+      <Container fluid>
+        <Row className="w-100">
+          <Col sm={8}><h1>The Generics</h1>
           </Col>
-          <Col>
+          <Col sm={4}>
             <a href="https://www.youtube.com/">
-              <Image src={imgpath} style={{ height: "30px", margin: "0px" }} />
+              <Image src={imgpath} alt="YouTube "/>
             </a>
 
             <a href="https://www.youtube.com/">
-              <Image
-                src={imgpath}
-                style={{ height: "30px", marginLeft: "3rem" }}
-              />
+              <Image src={imgpath} alt="YouTube "/>
             </a>
             <a href="https://www.youtube.com/">
-              <Image
-                src={imgpath}
-                style={{ height: "30px", marginLeft: "3rem" }}
-              />
+              <Image src={imgpath} alt="YouTube "/>
             </a>
           </Col>
         </Row>

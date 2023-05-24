@@ -1,13 +1,14 @@
-import React, { useState,useRef, useContext, useEffect } from 'react'
+import React, { useState,useRef, useContext} from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Button,Form } from 'react-bootstrap'
 import classes from './LoginLogout.module.css'
-import CartContext from '../../StoreContext/CartContext';
+import LoginContext from './LoginContext';
+
 const LoginLogout = () => {
   
     const [isLogin,setIsLogin]=useState(true);
     const [isLoading ,setIsLoading]=useState(false);  
-    const cartCtx=useContext(CartContext);
+    const logCtx=useContext(LoginContext);
    
     const emailInputRef=useRef();
   const passwordinputref=useRef();
@@ -16,20 +17,6 @@ const LoginLogout = () => {
         setIsLogin((prev)=>!prev);
    
     }
-
-
-    // useEffect(() => {
-    // //  const settimeout= 
-    //  setTimeout(()=> {
-    //     localStorage.removeItem('token')
-    //    }, 10000);
-    //    console.log('hii its LoginLogout page setTimeout');
-    
-    // // return() =>{
-    // //   clearTimeout(settimeout);
-    // // }
-    
-    // },[])
     const onSubmitHandler=(e)=>{
         e.preventDefault();
         const enteredEmail=emailInputRef.current.value;
@@ -66,7 +53,7 @@ const LoginLogout = () => {
           }
         }).then((data)=>{
           const currentTime=new Date().getMinutes();
-           cartCtx.TokenIn(data.idToken,currentTime)
+           logCtx.TokenIn(data.idToken,currentTime,enteredEmail)
             Navigate('/store');
         }).catch(err=>{
           alert(err.message)
@@ -74,8 +61,10 @@ const LoginLogout = () => {
       
     }
 
-  return (
+  return (<>
+    <h2 style={{textAlign:'center',marginTop:'3rem'}}>Login for Buying Product</h2>
     <div className={classes.maindiv}>
+      
     <Form onSubmit={onSubmitHandler}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -98,6 +87,7 @@ const LoginLogout = () => {
        {isLoading &&  <p >Sending Request...</p>} 
     </Form>
     </div>
+    </>
   )
 }
 
