@@ -14,12 +14,12 @@ const ContexProvider = (props) => {
   let Email=logCtx.email;
   Email=Email.replace("@","").replace(".",'')
   console.log(Email);
-  const url=`https://crudcrud.com/api/836ba56493bd4a38b8113292d8e53722/${Email}`;
+  const url=`https://crudcrud.com/api/b81aa2b3eb364134a409334f271c7d6c/${Email}`;
 
   useEffect(() => {
     if(logCtx.isLoggedIn)
   {
-    fetch(`https://crudcrud.com/api/836ba56493bd4a38b8113292d8e53722/${Email}`)
+    fetch(`https://crudcrud.com/api/b81aa2b3eb364134a409334f271c7d6c/${Email}`)
     .then((response)=>response.json())
     .then((res)=>{
       setCurrentCart(()=>{ 
@@ -80,8 +80,8 @@ const PutRequestcall=(updateItem,updateId)=>{
     }),
     
   })
-  .then((response)=>response.json())
-  .then((res)=>alert('Card Data updated',res))
+  .then(response=>response)
+  .then((response)=>alert('Card Data updated'))
   .catch((err)=>alert('Error in put request',err))
 }
 

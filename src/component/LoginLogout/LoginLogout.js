@@ -24,10 +24,10 @@ const LoginLogout = () => {
         let url;
        setIsLoading(true)
         if (isLogin) {
-          url='https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDgIhB5WrJOY3OaJJjaazkQ5CYYgrWuxiU';
+          url='https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAFdDZ48uSY8xzubhlA8ELMrBhppIy4dYs';
         } else {
           
-          url='https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDgIhB5WrJOY3OaJJjaazkQ5CYYgrWuxiU';
+          url='https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAFdDZ48uSY8xzubhlA8ELMrBhppIy4dYs';
         }
         fetch(url,{
           method:'POST',
@@ -52,8 +52,8 @@ const LoginLogout = () => {
             })
           }
         }).then((data)=>{
-          const currentTime=new Date().getMinutes();
-           logCtx.TokenIn(data.idToken,currentTime,enteredEmail)
+          // const currentTime=new Date().getMinutes();
+           logCtx.TokenIn(data.idToken,enteredEmail)
             Navigate('/store');
         }).catch(err=>{
           alert(err.message)

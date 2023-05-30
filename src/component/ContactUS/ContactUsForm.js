@@ -1,12 +1,13 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {useState} from 'react';
-
+import classes from './ContactUs.module.css'
 function ContactUSForm() {
  const [userData,setuserData]=useState({
     UserName:'',
     UserEmail:'',
     UserPhoneNumber:'',
+    UserMessage:''
  })   
  function onUserName(e){
 setuserData({
@@ -26,8 +27,14 @@ setuserData({
             UserPhoneNumber:e.target.value
         })
          }
+   function onUserMessage(e){
+      setuserData({
+             ...userData,
+              UserMessage:e.target.value
+          })
+           }
          async function PostDataToMyServer(ContactUsData){
-            const response=await fetch('https://react-movies-app-46037-default-rtdb.firebaseio.com/EcommerceContactus.json',{
+            const response=await fetch('https://ecommerce-app-38a32-default-rtdb.firebaseio.com/EcommerceContactus.json',{
                 method:'POST',
                 body:JSON.stringify(ContactUsData),
                 headers:{
@@ -43,14 +50,16 @@ setuserData({
         setuserData({
             UserName:'',
             UserEmail:'',
-            UserPhoneNumber:''
+            UserPhoneNumber:'',
+            UserMessage:''
         })
+        alert('Thank You for contact Us')
         
      }    
   return (
-    <div style={{margin:'2rem 20rem 0 20rem'}}>
+    <div className={classes.maindiv}>
         <Form onSubmit={onSubmitFormHandler}>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3">
         <Form.Label>Name</Form.Label>
         <Form.Control type="text" value={userData.UserName} onChange={onUserName} placeholder='User Name'/>
       </Form.Group>
@@ -58,10 +67,15 @@ setuserData({
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" value={userData.UserEmail} onChange={onUserEmail} placeholder='Enter email'/>
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3">
         <Form.Label>Phone Number</Form.Label>
         <Form.Control type="number" value={userData.UserPhoneNumber} onChange={onUserPhone} placeholder='Phone Number' />
       </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Label>Message</Form.Label>
+        <Form.Control type="text" value={userData.UserMessage} onChange={onUserMessage} placeholder='Phone Number' />
+      </Form.Group>
+      
       <Button variant="primary" type="submit">
         Submit
       </Button>

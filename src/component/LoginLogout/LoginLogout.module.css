@@ -5,8 +5,11 @@
     border: 3px solid blueviolet;
     border-radius: 12px;
     padding: 2rem;
-    
+    animation: mymove 5s infinite;
 }
+@keyframes mymove {
+    50% {box-shadow: 1px 7px 30px blue;}
+  }
 .maindiv Button{
     margin-bottom: 1rem;
 }

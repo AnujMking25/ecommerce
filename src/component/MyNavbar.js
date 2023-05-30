@@ -20,11 +20,11 @@ const onHideHandler=()=>{
     <Navbar bg="dark" variant="dark" className='p-1 ' > 
         <Container fluid className={classes.maindiv}>
             <Nav>
-                <NavLink  to='/' >HOME</NavLink>
-               {logCtx.isLoggedIn && <NavLink  to='/store' >STORE</NavLink>}
-                <NavLink to='/about'>ABOUT</NavLink>
-                <NavLink to='/contactus'>Contact Us</NavLink>
-                <NavLink to='/login'>Login</NavLink>
+                <NavLink style={({isActive})=>{return {color: isActive ? 'green':''}}} to='/' >HOME</NavLink>
+               {logCtx.isLoggedIn && <NavLink style={({isActive})=>{return {color : isActive? 'green':''}}} to='/store' >STORE</NavLink>}
+                <NavLink style={({isActive})=>{return {color: isActive? 'green':''}}} to='/about'>ABOUT</NavLink>
+                <NavLink style={({isActive})=>{return {color: isActive? 'green':''}}} to='/contactus'>Contact Us</NavLink>
+                <NavLink style={({isActive})=>{return {color: isActive? 'green':''}}} to='/login'>Login</NavLink>
             </Nav>
             {logCtx.isLoggedIn && <button onClick={onShowHandler}>CART</button>}
           

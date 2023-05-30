@@ -18,31 +18,18 @@ const LoginProvider = (props) => {
 //***************************Token remove from local Storage     ==> END <==**********   
 
       // *********************  AutoLogout code start here ***************************  
-      useEffect( () => {
-        const expireTime = localStorage.getItem("LogoutTime");
-        const currentTime = +new Date().getMinutes();
-        const RemainingMinute = expireTime - currentTime;
-        if (RemainingMinute >= 0) {
-          
+      useEffect(() => {   
           setTimeout(()=>{
             removeToken();
-            console.log("SetTimeout running");
-          }, RemainingMinute*1000*60);
-        } else {
-          if (RemainingMinute < 0) {
-            removeToken();
-          }
-        }
-      }
-    ,[userIsLoggedIn])
+          },30*1000*60);
+        },[userIsLoggedIn])
 // *********************  AutoLogout code End here *************************** 
 
 // ***************Token Store(ADD) in Local Storage     ==> START <==***************************
 
-const addToken = (idToken, currentTime,email) => {
+const addToken = (idToken,email) => {
     setToken(idToken);
     localStorage.setItem("Token", idToken);
-    localStorage.setItem("LogoutTime", +currentTime + 30);
     localStorage.setItem('UserEmail',email)
   };
   // ***************  Token Store(ADD) in Local Storage  ==> END <== ***************************
