@@ -1,3 +1,4 @@
+// ********************** code for Cart*******************
 import React, { useContext} from "react";
 import ReactDOM from "react-dom";
 import classes from "./Cart.module.css";
@@ -21,7 +22,7 @@ const ModalShow = (props) => {
   return (
     <>
       <div className={classes.maindiv}>
-        <Button onClick={props.onHide}>X</Button>
+        <Button id="X" onClick={props.onHide}>X</Button>
         <h1>Cart</h1>
         <Row style={{ textAlign: "center" }}>
           <Col sm={5}>
@@ -35,9 +36,12 @@ const ModalShow = (props) => {
           </Col>
         </Row>
         <div>{showlist}</div>
-        <h1>Total  ${cartCtx.totalAmount}</h1>
+        <h1>Total  ₹{cartCtx.totalAmount}</h1> 
+        {cartCtx.totalAmount>0 && <div className={classes.seconddiv}>
+        <Button style={{float:"left"}}>Countinue Shooping</Button>
+        <Button style={{float:"right"}}>Buy</Button>
+        </div>}
       </div>
-     
     </>
   );
 };

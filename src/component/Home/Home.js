@@ -10,9 +10,9 @@ const Home = () => {
         <div style={{ width: "100%", margin: "20px auto", paddingLeft: "40%" }}>
           <Button  style={{
               background: "gray",
-            }}>Get our Latest Album</Button>
+            }}>Get Our Latest Product</Button>
           <br />
-          <Button
+          {/* <Button
             style={{
               marginLeft: "3.5rem",
               marginTop: "1rem",
@@ -24,7 +24,7 @@ const Home = () => {
             }}
           >
             ►
-          </Button>
+          </Button> */}
         </div>
       </BannerGenerics>
       <HomeBody/>

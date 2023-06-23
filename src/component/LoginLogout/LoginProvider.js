@@ -7,7 +7,7 @@ const LoginProvider = (props) => {
     const [token, setToken] = useState(localStoragetoken);
 
     const userIsLoggedIn = !!token;
-//*************************Token remove from local Storage       ==> START <==**********  
+//*************************Token remove from local Storage     ==> START <==**********  
     const removeToken = () => {
         setToken(null);
         localStorage.removeItem("Token");
@@ -17,7 +17,7 @@ const LoginProvider = (props) => {
 
 //***************************Token remove from local Storage     ==> END <==**********   
 
-      // *********************  AutoLogout code start here ***************************  
+ // *********************  AutoLogout code start here ***************************  
       useEffect(() => {   
           setTimeout(()=>{
             removeToken();

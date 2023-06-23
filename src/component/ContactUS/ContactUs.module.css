@@ -1,12 +1,20 @@
 .maindiv{
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.h1{
+    text-align: center;
+    
 }
 .maindiv form{
     width: 70%;
     padding: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 12px;
+}
+
+.maindiv form button{
+    float: right;
 }

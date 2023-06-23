@@ -7,7 +7,7 @@ const MyFooter = () => {
     <div className={classes.maindiv}>
       <Container fluid>
         <Row className="w-100">
-          <Col sm={8}><h1>The Generics</h1>
+          <Col sm={8}><h1>My Shoping Portal</h1>
           </Col>
           <Col sm={4}>
             <a href="https://www.youtube.com/">

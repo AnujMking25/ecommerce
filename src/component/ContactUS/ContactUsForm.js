@@ -57,8 +57,11 @@ setuserData({
         
      }    
   return (
+    <> <h1 className={classes.h1}>Contact us</h1>
     <div className={classes.maindiv}>
+   
         <Form onSubmit={onSubmitFormHandler}>
+        
         <Form.Group className="mb-3">
         <Form.Label>Name</Form.Label>
         <Form.Control type="text" value={userData.UserName} onChange={onUserName} placeholder='User Name'/>
@@ -76,13 +79,14 @@ setuserData({
         <Form.Control type="text" value={userData.UserMessage} onChange={onUserMessage} placeholder='Phone Number' />
       </Form.Group>
       
-      <Button variant="primary" type="submit">
+      <Button type="submit">
         Submit
       </Button>
     </Form>
     </div>
-    
+    </>
   );
+
 }
 
 export default ContactUSForm;

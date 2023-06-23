@@ -9,13 +9,12 @@ const Store = () => {
     <>
       <BannerGenerics />
       <Container className="mt-5">
-        <h1 style={{ fontFamily: "cursive", textAlign: "center" }}>MUSIC</h1>
+        <h1 style={{ fontFamily: "cursive", textAlign: "center" }}>Product</h1>
       </Container>
       <Container>
         <Row style={{ width: "60%", margin: "auto" }}>
           <CardData />
         </Row>
-
         <div style={{ paddingLeft: "47%" }}>
           <Button className="mt-5" style={{backgroundColor:"#56CCF2",border:'none'}}>See the cart</Button>
         </div>

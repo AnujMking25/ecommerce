@@ -47,7 +47,7 @@ function MyCard(props) {
         <Row>
           <Col sm={4}>
             {" "}
-            <p>${props.price}</p>
+            <p>₹{props.price}</p>
           </Col>
           <Col sm={8} style={{ padding: "0" }}>
             <Button

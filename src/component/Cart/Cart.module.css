@@ -37,3 +37,16 @@
 .maindiv h4{
   border-bottom: 1px solid black;
 }
+
+.seconddiv Button{
+  background-color: rgb(82, 220, 82);
+  color: white;
+}
+.seconddiv{
+  margin-bottom: 15px;
+}
+.seconddiv Button:hover{
+  border: 1px solid #0ef;
+  background-color: rgb(82, 220, 82);
+  color: white;
+}

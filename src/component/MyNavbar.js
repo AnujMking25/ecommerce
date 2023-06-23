@@ -29,7 +29,7 @@ const onHideHandler=()=>{
             {logCtx.isLoggedIn && <button onClick={onShowHandler}>CART</button>}
           
         </Container> 
-        {show && <Cart onHide={onHideHandler}/>} 
+        {show && logCtx.isLoggedIn &&<Cart onHide={onHideHandler}/>} 
     </Navbar>
   )
 }
