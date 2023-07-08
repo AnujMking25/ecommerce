@@ -18,7 +18,7 @@ const ModalShow = (props) => {
       amount={item.amount}
     />
   )}</ul>
-   
+  
   return (
     <>
       <div className={classes.maindiv}>
@@ -38,7 +38,7 @@ const ModalShow = (props) => {
         <div>{showlist}</div>
         <h1>Total  ₹{cartCtx.totalAmount}</h1> 
         {cartCtx.totalAmount>0 && <div className={classes.seconddiv}>
-        <Button style={{float:"left"}}>Countinue Shooping</Button>
+        <Button style={{float:"left"}} onClick={props.onHide}>Countinue Shooping</Button>
         <Button style={{float:"right"}}>Buy</Button>
         </div>}
       </div>

@@ -1,0 +1,64 @@
+[debug] [2023-07-08T08:22:37.878Z] ----------------------------------------------------------------------
+[debug] [2023-07-08T08:22:37.883Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\King25\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-07-08T08:22:37.884Z] CLI Version:   11.30.0
+[debug] [2023-07-08T08:22:37.884Z] Platform:      win32
+[debug] [2023-07-08T08:22:37.885Z] Node Version:  v18.13.0
+[debug] [2023-07-08T08:22:37.886Z] Time:          Sat Jul 08 2023 13:52:37 GMT+0530 (India Standard Time)
+[debug] [2023-07-08T08:22:37.888Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-08T08:22:37.904Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-08T08:22:37.905Z] > authorizing via signed-in user (anuj170499@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\King25\Desktop\miniproject\E-commerec\ecommerce
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-07-08T08:23:31.495Z] > refreshing access token with scopes: []
+[debug] [2023-07-08T08:23:31.500Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-08T08:23:31.500Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-08T08:23:31.860Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-07-08T08:23:31.860Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-08T08:23:31.876Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-07-08T08:23:32.928Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-07-08T08:23:32.928Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2023-07-08T08:24:20.901Z] ----------------------------------------------------------------------
+[debug] [2023-07-08T08:24:20.907Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\King25\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-07-08T08:24:20.909Z] CLI Version:   11.30.0
+[debug] [2023-07-08T08:24:20.910Z] Platform:      win32
+[debug] [2023-07-08T08:24:20.910Z] Node Version:  v18.13.0
+[debug] [2023-07-08T08:24:20.912Z] Time:          Sat Jul 08 2023 13:54:20 GMT+0530 (India Standard Time)
+[debug] [2023-07-08T08:24:20.913Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-08T08:24:20.931Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-08T08:24:20.932Z] > authorizing via signed-in user (anuj170499@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\King25\Desktop\miniproject\E-commerec\ecommerce
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
